@@ -1,0 +1,11 @@
+{
+  "workbench.colorTheme": "Monokai Pro",
+  // "workbench.colorTheme": "GitHub Light",
+  "files.autoSave": "onFocusChange",
+  "prettier.printWidth": 150,
+  "editor.formatOnSave": true,
+  "editor.fontSize": 14,
+  "editor.fontFamily": "'Mono Lisa', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.renderWhitespace": "trailing"
+}

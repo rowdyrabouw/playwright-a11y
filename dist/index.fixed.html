@@ -1,0 +1,127 @@
+<!doctype html>
+<!-- Violates WCAG 3.1.1: Missing lang attribute on html tag -->
+<html lang="en">
+  <head>
+    <title>Developers Insurance</title>
+    <!-- Violates WCAG 1.3.4 (Orientation): Restricting viewport zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        color: #1a1a1a;
+        margin: 20px;
+        font-size: 120%;
+      }
+      nav {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        padding: 10px;
+        margin-block-end: 32px;
+        a {
+          color: #ffffff;
+          margin-inline: 16px;
+        }
+      }
+      main {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      h1 {
+        margin-block: 0 12px;
+      }
+      h2,
+      h3 {
+        margin-block-end: 8px;
+      }
+      img {
+        max-width: 100%;
+      }
+      input[type="submit"] {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        padding: 8px;
+        cursor: pointer;
+        width: fit-content;
+        border-radius: 4px;
+        margin-inline-start: 8px;
+      }
+      /* Violates WCAG 1.4.1: Link relies only on color (no underline) */
+      /* a {
+        text-decoration: none;
+      } */
+      /* Violates WCAG 1.3.1: Visual heading that is not semantically a heading */
+      /* .fake-heading {
+        font-size: 1.5rem;
+        font-weight: bold;
+      } */
+      /* Violates 1.3.1: List missing li elements */
+      /* ul span {
+        display: block;
+        &::before {
+          content: "• ";
+        }
+      } */
+      blockquote {
+        font-size: 2rem;
+        &::before {
+          content: open-quote;
+          font-family: Times, "Courier New", Courier, monospace;
+          margin-inline-end: 0.25em;
+        }
+        &::after {
+          content: close-quote;
+          font-family: Times, "Courier New", Courier, monospace;
+          margin-inline-start: 0.25em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav><a href="/">Home</a> | <a href="/">Policies</a> | <a href="/">Claims</a> | <a href="/">Contact</a></nav>
+    <main>
+      <div>
+        <h1>Welcome to Developers Insurance</h1>
+        <p>
+          Whether you are a freelance coder or a scaling tech agency, Developers Insurance provides specialized coverage designed for the unique risks
+          of the digital world. Unlike traditional business insurance, these policies address the specific challenges of building, shipping, and
+          maintaining software.
+        </p>
+        <!-- Violates WCAG 1.3.1: Heading levels skipped (h1 directly to h3) -->
+        <h2>Get the best coverage</h2>
+        <p>Your primary defense against claims of buggy code, system outages, or failure to meet project specifications.</p>
+        <!-- Violates 1.3.1: List missing li elements -->
+        <ul>
+          <li>Essential for anyone handling client data.</li>
+          <li>Covers accidental damage to clients during on-site meetings.</li>
+        </ul>
+        <!-- Violates WCAG 1.3.1: Visual heading that is not semantically a heading -->
+        <h2>Our Policies</h2>
+        <p>
+          When choosing a policy, ensure it includes "Network Interruption" coverage, which specifically protects you if your software causes a
+          client’s business to grind to a halt.
+        </p>
+        <p>To learn more about our special policies, click <a href="/policies">here</a>.</p>
+
+        <h3>Login</h3>
+        <form action="/" method="post">
+          <!-- Violates WCAG 3.3.2: Input missing a label or aria-label -->
+          <label for="policyNumber">Enter your policy number:</label>
+          <input type="text" id="policyNumber" />
+          <input type="submit" value="Login" />
+        </form>
+      </div>
+      <div>
+        <!-- Violates WCAG 3.1.2: Invalid language code or missing valid lang for parts (Axe catches invalid-lang) -->
+        <p class="quote">As we say in France:</p>
+        <span lang="fr"><blockquote>Fonctionne sur ma machine</blockquote></span>
+
+        <!-- Violates WCAG 1.1.1: Image missing alt attribute -->
+        <img
+          src="Gemini_Generated_Image_57xbct57xbct57xb.jpg"
+          alt="Coder behind a glowing protective shield in an open-plan office at dusk, with cybersecurity icons, code on the laptop, and distant colleagues."
+        />
+      </div>
+    </main>
+  </body>
+</html>

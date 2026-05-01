@@ -1,0 +1,24 @@
+{
+  "name": "playwright-a11y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "live-server dist",
+    "test:example": "npx playwright test tests/example.spec.ts",
+    "test:report": "npx playwright show-report",
+    "test:a11y:basic": "npx playwright test tests/a11y.basic.spec.ts --project=chromium",
+    "test:a11y:testinfo": "npx playwright test tests/a11y.testinfo.spec.ts --project=chromium",
+    "test:a11y:html": "npx playwright test tests/a11y.html.spec.ts --project=chromium",
+    "test:a11y:html:fixed": "npx playwright test tests/a11y.html.fixed.spec.ts --project=chromium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.2",
+    "@playwright/test": "^1.59.1",
+    "axe-html-reporter": "^2.2.11",
+    "live-server": "^1.2.2"
+  }
+}
