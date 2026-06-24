@@ -1,6 +1,6 @@
 {
-  "workbench.colorTheme": "Monokai Pro",
-  // "workbench.colorTheme": "GitHub Light",
+  // "workbench.colorTheme": "Monokai Pro",
+  "workbench.colorTheme": "GitHub Light",
   "files.autoSave": "onFocusChange",
   "prettier.printWidth": 150,
   "editor.formatOnSave": true,
