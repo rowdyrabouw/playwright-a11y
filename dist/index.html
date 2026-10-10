@@ -2,119 +2,155 @@
 <!-- Violates WCAG 3.1.1: Missing lang attribute on html tag -->
 <html>
   <head>
-    <title>Mushroom Kingdom Adventures</title>
+    <title>Pac-Man Maze Adventures</title>
     <!-- Violates WCAG 1.3.4 (Orientation): Restricting viewport zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <style>
+      :root {
+        --pac-yellow: #ffd12a;
+        --pac-dark: #111111;
+        --pac-blue: #1d74ff;
+        --pac-pink: #ff5ca8;
+        --pac-red: #ff4d4d;
+        --pac-white: #ffffff;
+      }
+
       body {
         font-family: Arial, sans-serif;
-        color: #1a1a1a;
+        color: var(--pac-white);
+        background: radial-gradient(circle at top, #1a1a1a 0%, #0a0a0a 40%, #050505 100%);
         margin: 20px;
         font-size: 120%;
       }
       nav {
-        background-color: #1a1a1a;
-        color: #ffffff;
-        padding: 10px;
+        background: linear-gradient(90deg, #111111, #222222);
+        color: var(--pac-yellow);
+        padding: 12px 16px;
         margin-block-end: 32px;
-        a {
-          color: #ffffff;
-          margin-inline: 16px;
-        }
+        border: 3px solid var(--pac-yellow);
+        border-radius: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      nav a {
+        color: var(--pac-yellow);
+        margin-inline: 16px;
+        text-decoration: none;
       }
       main {
         display: grid;
         gap: 40px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       h1 {
         margin-block: 0 12px;
+        color: var(--pac-yellow);
       }
       h2,
       h3 {
         margin-block-end: 8px;
+        color: var(--pac-yellow);
       }
       img {
         max-width: 100%;
+        border-radius: 16px;
+        box-shadow: 0 0 20px rgba(255, 209, 42, 0.35);
+      }
+      input[type="text"] {
+        padding: 10px 12px;
+        border: 2px solid var(--pac-yellow);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--pac-white);
       }
       input[type="submit"] {
-        background-color: #1a1a1a;
-        color: #ffffff;
-        padding: 8px;
+        background-color: var(--pac-yellow);
+        color: var(--pac-dark);
+        padding: 10px 14px;
         cursor: pointer;
         width: fit-content;
-        border-radius: 4px;
+        border-radius: 8px;
+        border: none;
+        font-weight: bold;
         margin-inline-start: 8px;
       }
       /* Violates WCAG 1.4.1: Link relies only on color (no underline) */
       a {
+        color: var(--pac-yellow);
         text-decoration: none;
       }
       /* Violates WCAG 1.3.1: Visual heading that is not semantically a heading */
       .fake-heading {
         font-size: 1.5rem;
         font-weight: bold;
+        color: var(--pac-yellow);
       }
-      /* Violates 1.3.1: List missing li elements */
       ul div::before {
         content: "• ";
+        color: var(--pac-yellow);
       }
       blockquote {
         font-size: 2rem;
-        &::before {
-          content: open-quote;
-          font-family: Times, "Courier New", Courier, monospace;
-          margin-inline-end: 0.25em;
-        }
-        &::after {
-          content: close-quote;
-          font-family: Times, "Courier New", Courier, monospace;
-          margin-inline-start: 0.25em;
-        }
+        color: var(--pac-yellow);
+        margin: 0;
+      }
+      blockquote::before,
+      blockquote::after {
+        content: open-quote;
+        font-family: Times, "Courier New", Courier, monospace;
+        margin-inline-end: 0.25em;
+      }
+      blockquote::after {
+        content: close-quote;
+        margin-inline-start: 0.25em;
+      }
+      .maze-art {
+        background: linear-gradient(135deg, rgba(29, 116, 255, 0.2), rgba(255, 209, 42, 0.08));
+        border: 2px solid var(--pac-yellow);
+        border-radius: 16px;
+        padding: 16px;
       }
     </style>
   </head>
   <body>
-    <nav><a href="/">World 1-1</a> | <a href="/">Power-Ups</a> | <a href="/">Extra Lives</a> | <a href="/">Castles</a></nav>
+    <nav><a href="/">Maze</a> | <a href="/">Power Pellets</a> | <a href="/">Ghosts</a> | <a href="/">Bonus Fruits</a></nav>
     <main>
       <div>
-        <h1>Welcome to Mushroom Kingdom Adventures</h1>
+        <h1>Welcome to Pac-Man Maze Adventures</h1>
         <p>
-          Whether you are a heroic plumber or a helpful Toad, the Mushroom Kingdom provides endless adventures and exciting challenges in the 8-bit
-          world. Grab a Super Mushroom and get ready for the specific challenges of stomping Goombas, dodging fireballs, and rescuing Princess Peach
-          from Bowser's castle.
+          Whether you are a fearless maze runner or a careful ghost dodger, the arcade world is packed with glowing pellets, power-ups, and high-score
+          dreams. Grab a power pellet, track the ghosts, and race through the maze for the next big snack-sized victory.
         </p>
         <!-- Violates WCAG 1.3.1: Heading levels skipped (h1 directly to h3) -->
-        <h3>Get the Star Power!</h3>
-        <p>Your ultimate defense against falling into lava, getting hit by spiked shells, or running out of time before reaching the flag pole.</p>
+        <h3>Get the Power Pellet!</h3>
+        <p>Your edge against the ghost pack, tight corners, and last-second chases before the bonus round begins.</p>
         <!-- Violates 1.3.1: List missing li elements -->
         <ul>
-          <div>Essential for throwing fireballs at Piranha Plants.</div>
-          <div>Great for smashing through brick blocks to find coins.</div>
+          <div>Essential for turning Blinky, Pinky, Inky, and Clyde into easy pickings.</div>
+          <div>Great for clearing a maze and stacking points before time runs out.</div>
         </ul>
         <!-- Violates WCAG 1.3.1: Visual heading that is not semantically a heading -->
-        <div class="fake-heading">Secret Items</div>
+        <div class="fake-heading">Bonus Fruits</div>
         <p>
-          When exploring the levels, always remember to look for invisible blocks containing "1-Up Mushrooms" which give you an extra chance if your
-          jump down a pipe mistakenly lands you in a bottomless pit.
+          When exploring the maze, keep an eye out for cherries, strawberries, and other bonus treats that can add a huge score boost if you stay
+          sharp and keep moving.
         </p>
-        <p>To learn more about finding special power-ups, click <a href="/power-ups">here</a>.</p>
+        <p>To learn more about the next level, click <a href="/power-ups">here</a>.</p>
 
         <h3>Level Select</h3>
         <form action="/" method="post">
           <!-- Violates WCAG 3.3.2: Input missing a label or aria-label -->
-          Enter your Player ID (It's a-me!):
-          <input type="text" />
-          <input type="submit" value="Let's-a go!" />
+          <label>Enter your Player Name:</label>
+          <input name="player" type="text" />
+          <input type="submit" value="Waka! Start!" />
         </form>
       </div>
-      <div>
+      <div class="maze-art">
         <!-- Violates WCAG 3.1.2: Invalid language code or missing valid lang for parts (Axe catches invalid-lang) -->
-        <p class="quote">As Mario says in Italy:</p>
-        <span lang="italian"><blockquote>Mamma mia!</blockquote></span>
-
+        <p class="quote">As Pac-Man says in the arcade:</p>
+        <span lang="japanese"><blockquote>ワカ・ワカ</blockquote></span>
         <!-- Violates WCAG 1.1.1: Image missing alt attribute -->
-        <img src="7b8f3b07-54cd-4bc4-ba81-a8b9d5477732.jpg" />
+        <img src="Gemini_Generated_Image_1l1sof1l1sof1l1s.jpg" />
       </div>
     </main>
   </body>
