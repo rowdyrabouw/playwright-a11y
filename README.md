@@ -18,7 +18,6 @@ To get started with the accessibility testing code, follow these steps:
 
    ```bash
    pnpm install
-
    ```
 
 4. Start the local server:

@@ -1,10 +1,10 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-test("page should be accessible", async ({ page }, testInfo) => {
+test("Page should be accessible", async ({ page }, testInfo) => {
   await page.goto("http://127.0.0.1:8080/");
 
-  await test.step("run accessibility scan", async () => {
+  await test.step("Run accessibility scan", async () => {
     const axeResults = await new AxeBuilder({ page }).analyze();
 
     await testInfo.attach("axe-results", {
