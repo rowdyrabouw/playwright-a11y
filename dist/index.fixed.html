@@ -2,121 +2,53 @@
 <!-- Violates WCAG 3.1.1: Missing lang attribute on html tag -->
 <html lang="en">
   <head>
-    <title>Mushroom Kingdom Adventures</title>
+    <title>Pac-Man Maze Adventures</title>
     <!-- Violates WCAG 1.3.4 (Orientation): Restricting viewport zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        color: #1a1a1a;
-        margin: 20px;
-        font-size: 120%;
-      }
-      nav {
-        background-color: #1a1a1a;
-        color: #ffffff;
-        padding: 10px;
-        margin-block-end: 32px;
-        a {
-          color: #ffffff;
-          margin-inline: 16px;
-        }
-      }
-      main {
-        display: grid;
-        gap: 40px;
-        grid-template-columns: repeat(2, 1fr);
-      }
-      h1 {
-        margin-block: 0 12px;
-      }
-      h2,
-      h3 {
-        margin-block-end: 8px;
-      }
-      img {
-        max-width: 100%;
-      }
-      input[type="submit"] {
-        background-color: #1a1a1a;
-        color: #ffffff;
-        padding: 8px;
-        cursor: pointer;
-        width: fit-content;
-        border-radius: 4px;
-        margin-inline-start: 8px;
-      }
-      /* Violates WCAG 1.4.1: Link relies only on color (no underline) */
-      nav a {
-        text-decoration: none;
-      }
-      /* Violates WCAG 1.3.1: Visual heading that is not semantically a heading */
-      /* .fake-heading {
-        font-size: 1.5rem;
-        font-weight: bold;
-      } */
-      /* Violates 1.3.1: List missing li elements */
-      /* ul div::before {
-        content: "• ";
-      } */
-      blockquote {
-        font-size: 2rem;
-        &::before {
-          content: open-quote;
-          font-family: Times, "Courier New", Courier, monospace;
-          margin-inline-end: 0.25em;
-        }
-        &::after {
-          content: close-quote;
-          font-family: Times, "Courier New", Courier, monospace;
-          margin-inline-start: 0.25em;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.fixed.css" />
   </head>
   <body>
-    <nav><a href="/">World 1-1</a> | <a href="/">Power-Ups</a> | <a href="/">Extra Lives</a> | <a href="/">Castles</a></nav>
+    <nav><a href="/">Maze</a> | <a href="/">Power Pellets</a> | <a href="/">Ghosts</a> | <a href="/">Bonus Fruits</a></nav>
     <main>
       <div>
-        <h1>Welcome to Mushroom Kingdom Adventures</h1>
+        <h1>Welcome to Pac-Man Maze Adventures</h1>
         <p>
-          Whether you are a heroic plumber or a helpful Toad, the Mushroom Kingdom provides endless adventures and exciting challenges in the 8-bit
-          world. Grab a Super Mushroom and get ready for the specific challenges of stomping Goombas, dodging fireballs, and rescuing Princess Peach
-          from Bowser's castle.
+          Whether you are a fearless maze runner or a careful ghost dodger, the arcade world is packed with glowing pellets, power-ups, and high-score
+          dreams. Grab a power pellet, track the ghosts, and race through the maze for the next big snack-sized victory.
         </p>
         <!-- Violates WCAG 1.3.1: Heading levels skipped (h1 directly to h3) -->
-        <h2>Get the Star Power!</h2>
-        <p>Your ultimate defense against falling into lava, getting hit by spiked shells, or running out of time before reaching the flag pole.</p>
+        <h2>Get the Power Pellet!</h2>
+        <p>Your edge against the ghost pack, tight corners, and last-second chases before the bonus round begins.</p>
         <!-- Violates 1.3.1: List missing li elements -->
         <ul>
-          <li>Essential for throwing fireballs at Piranha Plants.</li>
-          <li>Great for smashing through brick blocks to find coins.</li>
+          <li>Essential for turning Blinky, Pinky, Inky, and Clyde into easy pickings.</li>
+          <li>Great for clearing a maze and stacking points before time runs out.</li>
         </ul>
         <!-- Violates WCAG 1.3.1: Visual heading that is not semantically a heading -->
-        <h2>Secret Items</h2>
+        <h2>Bonus Fruits</h2>
         <p>
-          When exploring the levels, always remember to look for invisible blocks containing "1-Up Mushrooms" which give you an extra chance if your
-          jump down a pipe mistakenly lands you in a bottomless pit.
+          When exploring the maze, keep an eye out for cherries, strawberries, and other bonus treats that can add a huge score boost if you stay
+          sharp and keep moving.
         </p>
-        <p>To learn more about finding special power-ups, click <a href="/power-ups">here</a>.</p>
+        <p>To learn more about the next level, click <a href="/power-ups">here</a>.</p>
 
         <h3>Level Select</h3>
         <form action="/" method="post">
           <!-- Violates WCAG 3.3.2: Input missing a label or aria-label -->
-          <label for="player">Enter your Player ID (It's a-me!):</label>
-          <input type="text" id="player" />
-          <input type="submit" value="Let's-a go!" />
+          <label for="player">Enter your Player Name:</label>
+          <input name="player" type="text" id="player" />
+          <input type="submit" value="Waka! Start!" />
         </form>
       </div>
-      <div>
+      <div class="maze-art">
         <!-- Violates WCAG 3.1.2: Invalid language code or missing valid lang for parts (Axe catches invalid-lang) -->
-        <p class="quote">As Mario says in Italy:</p>
-        <span lang="it"><blockquote>Mamma mia!</blockquote></span>
-
+        <p class="quote">As Pac-Man says in the arcade:</p>
+        <span lang="ja"><blockquote>ワカ・ワカ</blockquote></span>
         <!-- Violates WCAG 1.1.1: Image missing alt attribute -->
         <img
-          src="7b8f3b07-54cd-4bc4-ba81-a8b9d5477732.jpg"
-          alt="An 8-bit Super Mario triptych: Mario gets a mushroom, dodges fire, and faces Bowser to save Peach."
+          src="Gemini_Generated_Image_soeanusoeanusoea.jpg"
+          alt="Retro art of Pac-Man chasing a scared blue ghost, 
+     with four ghosts trailing behind."
         />
       </div>
     </main>
